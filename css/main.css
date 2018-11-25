@@ -1,0 +1,66 @@
+body{
+	background-image: url(css/bg.jpg);
+}
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+}
+.borbot {
+    margin-left: 10px;
+  border-bottom: 5px solid transparent;
+  transition-duration: .4s; }
+  .borbot:hover {
+    border-bottom: 5px solid white;
+    cursor: pointer; }
+.button{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	line-height: 60px;
+	color: #fff;
+	font-size: 24px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: sans-serif;
+	box-sizing: border-box;
+	background: linear-gradient(90deg, #000, #fff, #000, #fff);
+	background-size: 400%;
+	border-radius: 50%;
+	z-index: 1;
+}
+.button:hover{
+	animation: animate 8s linear infinite;
+}
+@keyframes animate{
+	0%{
+		background-position: 0%;
+	}
+	100%{
+		background-position: 400%;
+	}
+}
+.button:before{
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	right: -5px;
+	bottom: -5px;
+	z-index: -1;
+	background: linear-gradient(90deg, #000, #fff, #000, #fff);
+	background-size: 400%;
+	border-radius: 40px;
+	opacity: 0;
+	transition: 0.5s;
+}
+.button:hover:before{
+	filter: blur(20px);
+	opacity: 1;
+}
